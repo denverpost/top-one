@@ -48,6 +48,7 @@ $broncos = array('http://www.denverpost.com/sports/denver-broncos/','top-broncos
 <html class="no-js" lang="en">
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="refresh" content="900">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Denver Post Homepage Top Story Tracker</title>
     <meta name="robots" content="noindex,nofollow">

@@ -115,13 +115,13 @@ $broncos = array('http://www.denverpost.com/sports/denver-broncos/','top-broncos
             </div>
         </div>
         <div class="large-4 columns">
-            <h2><a href="./news.php">Sports</a></h2>
+            <h2><a href="./sports.php">Sports</a></h2>
             <div class="listings">
                 <?php echo getTopOnes($sports); ?>
             </div>
         </div>
         <div class="large-4 columns">
-            <h2><a href="./news.php">Broncos</a></h2>
+            <h2><a href="./broncos.php">Broncos</a></h2>
             <div class="listings">
                 <?php echo getTopOnes($broncos); ?>
             </div>

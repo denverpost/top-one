@@ -63,7 +63,7 @@ if ($newfind) {
 	fclose($handleout);
 }
 
-echo ( http_response_code() ) ? $output : 'Sports headlines: checked.';
+echo ( http_response_code() ) ? $output : 'Sports headlines: checked ' . date("Y-m-d H:i:s") . "\n";
 
 if ( http_response_code() ) {
 ?>

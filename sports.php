@@ -1,3 +1,4 @@
+<?php if ( http_response_code() ) { ?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
@@ -24,7 +25,8 @@
                     <th style="font-size:120%;width:30%;">Time first seen</th>
                 </tr>
 
-<?php 
+<?php
+}
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -61,8 +63,9 @@ if ($newfind) {
 	fclose($handleout);
 }
 
-echo $output;
+echo ( http_response_code() ) ? $output : 'Sports headlines: checked.';
 
+if ( http_response_code() ) {
 ?>
             </table>
         </div>
@@ -70,3 +73,4 @@ echo $output;
 </section>
 </body>
 </html>
+<?php } ?>

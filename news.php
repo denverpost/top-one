@@ -1,3 +1,4 @@
+<?php if ( http_response_code() ) { ?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
@@ -7,8 +8,8 @@
     <meta name="robots" content="noindex,nofollow">
     <link rel="stylesheet" href="//extras.denverpost.com/transgender/css/normalize.css" />
     <link rel="stylesheet" href="//extras.denverpost.com/transgender/css/foundation.min.css" />
-    <link href='http://fonts.googleapis.com/css?family=Noticia+Text:400,700,400italic,700italic|PT+Sans:400,700,400italic,700italic|PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" href="http://extras.mnginteractive.com/live/media/favIcon/dpo/favicon.ico" type="image/x-icon" />
+    <link href='https://fonts.googleapis.com/css?family=Noticia+Text:400,700,400italic,700italic|PT+Sans:400,700,400italic,700italic|PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="//plus.denverpost.com/favicon.ico" type="image/x-icon" />
 </head>
 <body style="margin:0;">
 
@@ -25,6 +26,7 @@
                 </tr>
 
 <?php 
+}
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -33,7 +35,7 @@ require_once('./simple_html_dom.php');
 date_default_timezone_set('America/Denver');
 
 $now = date("F j, Y, g:i a");
-$html = file_get_html('http://www.denverpost.com/');
+$html = file_get_html('https://www.denverpost.com/');
 
 foreach( $html->find('article.feature-large-top a.article-title') as $toplink ) {
 	$line[0] = $toplink->href;
@@ -61,8 +63,9 @@ if ($newfind) {
 	fclose($handleout);
 }
 
-echo $output;
+echo ( http_response_code() ) ? $output : 'News headlines: checked.';
 
+if ( http_response_code() ) {
 ?>
             </table>
         </div>
@@ -70,3 +73,4 @@ echo $output;
 </section>
 </body>
 </html>
+<?php } ?>

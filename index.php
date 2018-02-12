@@ -55,7 +55,7 @@ $broncos = array('http://www.denverpost.com/sports/denver-broncos/','top-broncos
     <link rel="stylesheet" href="//extras.denverpost.com/transgender/css/normalize.css" />
     <link rel="stylesheet" href="//extras.denverpost.com/transgender/css/foundation.min.css" />
     <link href='http://fonts.googleapis.com/css?family=Noticia+Text:400,700,400italic,700italic|PT+Sans:400,700,400italic,700italic|PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" href="https://plus.denverpost.com/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="//plus.denverpost.com/favicon.ico" type="image/x-icon" />
     <style type="text/css">
         div.listing {
             width:100%;
